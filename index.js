@@ -138,3 +138,112 @@ console.log("isGoodCondust: " + isGoodConduct);
 
 let grades = [98.7, 92.1, 90.2, 94.6];
 console.log(grades);
+
+// Objects
+//  -another special kind of data type that's used to mimic real world objects/items
+//  Syntax
+//  	let/const objectName = {
+// 			propertyA: value,
+//			propertyB: value
+// 		}
+
+let	person = {
+	fullName: "Juan Dela Cruz",
+	age: 35,
+	isMarried: false,
+	contact: ["09191847568", "0984738289"],
+	address: {
+		houseNumber: 458,
+		city: "Marikina"
+	}
+}
+
+console.log(person);
+
+// Null vs. Undefined
+/* Null
+	- used to intentionally express the absence of a value in a variable declaration.
+*/
+
+let spouse = null;
+let money = 0;
+
+/* Undefined
+	- represents the state of a variable that has been declared but without an assigned value.
+*/
+
+let fullName;
+
+/* Functions
+	- Functions in JS are lines/blocks of codes that tell our device/application to perform a certain task when called/invoked
+
+	Declaring Functions
+	Syntax
+	function functionName(){
+		line/block of codes;
+	}
+*/
+
+// Declaring a function
+function printName(){
+	console.log("My name is John");
+}
+
+//Invoking/Calling a function
+printName();
+
+//Declare a function that will display your favorite animal
+function animal(){
+	console.log("Monke");
+}
+
+animal();
+
+//(name) - parameter
+//Parameter = actis as a named vairable/container that exists only inside of a function
+function printName(name){
+	console.log("My name is " + name);
+}
+
+//Argument - the actual value that is provided a function for it to work properly
+printName("John");
+printName("Jane");
+
+function argumentFunction(){
+	console.log("This function was passed as an argument before the message was printed")
+}
+
+function invokeFunction(argumentFunction){
+	argumentFunction();
+}
+
+invokeFunction(argumentFunction);
+
+//Finding more information about a function in the console
+console.log(argumentFunction);
+
+//Using multiple parameters
+
+function createFullName(firstName, middleName, lastName){
+	console.log("Hello " + firstName + " " + middleName + " " + lastName);
+}
+
+createFullName("Juan", "Pablo", "Cruz");
+createFullName("Juan", "Pablo");
+createFullName("Juan", "Pablo", "Cruz", "Junior");
+
+//Using variables as arguments
+let firstName = "John";
+let middleName = "Doe";
+let lastName = "Smith";
+
+createFullName(firstName, middleName, lastName);
+
+// the "return" statement
+// - allows the output of a fucntion to be passed to the line/block of code that invoked/called the function
+function returnFullName(firstName, middleName, lastName){
+	return firstName + " " + middleName + " " + lastName;
+	console.log("A simple message");
+}
+
+console.log(returnFullName(firstName, middleName, lastName));
